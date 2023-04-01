@@ -20,6 +20,7 @@ class HomePage extends StatelessWidget {
                 fontSize: 20, fontWeight: FontWeight.bold, color: Colors.blue),
             textDirection: TextDirection.ltr,
             textAlign: TextAlign.center,
+            maxLines: 2,
           ),
         ),
       ),
