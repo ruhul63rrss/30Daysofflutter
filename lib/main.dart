@@ -1,3 +1,6 @@
+// ignore_for_file: prefer_const_constructors
+import 'package:app2/home_page.dart';
+import 'package:app2/login_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,9 +13,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Container(
-        child: Text("Welcome to 30 days of flutter "),
-      ),
+      themeMode: ThemeMode.light,
+      theme: ThemeData(primarySwatch: Colors.purple),
+      darkTheme: ThemeData(brightness: Brightness.dark),
+      initialRoute: "/home",
+      routes: {
+        "/": (context) => LoginPage(),
+        "/home": (context) => HomePage(),
+        "/login": (context) => LoginPage()
+      },
     );
   }
 }
